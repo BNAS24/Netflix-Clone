@@ -1,0 +1,39 @@
+#button {
+  background-color: red !important;
+}
+
+.navbar-toggler-icon {
+  background-size: 100% 100% !important;
+}
+
+.nav-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: auto !important;
+  width: 10vw !important;
+
+}
+
+/*This is the container of the navigation bar elements*/
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch !important;
+  height: 5vw;
+}
+
+/*This is the netflix logo container*/
+.ms-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  --bs-btn-padding-x: 0  !important;
+  --bs-btn-padding-y: 0 !important;
+}

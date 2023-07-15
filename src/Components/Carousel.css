@@ -1,0 +1,89 @@
+/* Carousel.css */
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  height: 500px;
+  max-width: 100%;
+  margin-top: -108px;
+  /*border: dotted 1px red;*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  height: 360px;
+  z-index: 2;
+}
+
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 285px;
+  height: 354px;
+  margin-right: 20px;
+  background-color: darkslategrey;
+  border-radius: 0.2vm;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.cardImg {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2px;
+}
+
+.prev-btn,
+.next-btn {
+  height: 354px;
+  z-index: 4;
+  background-color: transparent;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+  border: 1px darkgrey;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prev-btn {
+  position: fixed;
+  margin-left: 0.5px;
+  top: 378px;
+}
+
+.next-btn {
+  position: fixed;
+  right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: darkgrey;
+  /* Change background color on hover */
+  border: 1px groove;
+}

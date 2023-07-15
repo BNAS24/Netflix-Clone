@@ -1,0 +1,84 @@
+.video-container {
+  display: flex;
+  position: relative;
+}
+
+.mute-button.circle {
+    /* Positioning */
+    position: absolute;
+    bottom: 10vh !important;
+    right: 5vw !important;
+    /*Size*/
+    height: 5.5% !important;
+    width: 3% !important;
+
+  transition: border 0.3s ease, opacity 0.3s ease;
+}
+
+.mute-button.circle.hovered {
+  border: 1px solid white;
+  /* Additional styles for the hovered state */
+}
+
+.play-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 8% !important;
+  height: 5% !important;
+  font-size: 1.4vw !important;
+    /* Positioning */
+    position: absolute;
+    bottom: 10vh !important;
+    left: 3.6vw !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.play-button:hover .play-text {
+  color: #000;
+}
+
+.my-list-button {
+  /* Display and alignment */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  /* Size */
+  width: 8% !important;
+  height: 5% !important;
+  /* Typography */
+  font-size: 1.4vw !important;
+  /* Background and color */
+  background-color: rgba(217, 217, 217, 0.25);
+  color: #fff;
+  /* Positioning */
+  position: absolute;
+  bottom: 10vh !important;
+  left: 12.5vw !important;
+  /* Borders and padding */
+  border: none;
+  border-radius: 7%;
+  padding: 10px;
+  /* Cursor and transition */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.my-list-button:hover {
+  background-color: #fff;
+}
+
+.my-list-button .list-text {
+  color: #fff;
+}
+
+.my-list-button:hover .list-text {
+  color: #000;
+}
