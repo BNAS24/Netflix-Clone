@@ -1,11 +1,11 @@
 #VolumeOff {
-    width: 1.9vh;
-    height: 1.1vw;
+    width: 1.3vw;
+    height: auto;
     
 }
 
 #VolumeOn {
     width: 1.3vw;
-    height: 2.4vh;
+    height: auto;
 }
 
