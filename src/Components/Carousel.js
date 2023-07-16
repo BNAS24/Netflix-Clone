@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Carousel.css';
 
 function SliderComponent() {
+  const wrapperRef = useRef(null);
+
+  const handlePrevClick = () => {
+    wrapperRef.current.scrollBy({
+      left: -200,
+      behavior: "smooth"
+    });
+  };
+
+  const handleNextClick = () => {
+    wrapperRef.current.scrollBy({
+      left: 200,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <div className="wrapper">
+    <div className="wrapper" ref={wrapperRef}>
       <div className="card-container">
         <div className="card" id="first">
           <img className="cardImg" src="https://i.postimg.cc/FzFhQ4j5/Black-Widow.jpg" alt="Black Widow" />
@@ -40,8 +56,8 @@ function SliderComponent() {
           <img className="cardImg" src="https://i.postimg.cc/Gmh0JVZ4/The-Old-Guard.png" alt="The Old Guard" />
         </div>
       </div>
-      <button className="prev-btn"></button>
-      <button className="next-btn"></button>
+      <button className="prev-btn" onClick={handlePrevClick}></button>
+      <button className="next-btn" onClick={handleNextClick}></button>
     </div>
   );
 }
