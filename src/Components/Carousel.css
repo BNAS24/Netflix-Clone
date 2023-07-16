@@ -14,7 +14,6 @@
  
 
   /*Positioning*/
-  position: relative;
   z-index: 1;
 
   /*Backgrounds and Borders*/
@@ -29,7 +28,7 @@
 .card-container {
   /*Display and layout*/
   display: flex;
-  overflow-y: visible;
+  /*overflow-y: visible;*/
 
   /*Box model*/
   width: 100vm;
@@ -144,7 +143,6 @@
 
   /*Positioning*/
   position: absolute;
-  top: 336px;
   right: 1px;
   z-index: 3;
 
@@ -157,13 +155,6 @@
   background-size: 21px;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: darkgrey;
-  /* Change background color on hover */
-  border: 1px groove;
 }
 
 .prev-btn:hover {
