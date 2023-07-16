@@ -4,13 +4,13 @@
 }
 
 .mute-button.circle {
-    /* Positioning */
-    position: absolute;
-    bottom: 10vh !important;
-    right: 5vw !important;
-    /*Size*/
-    height: 5.5% !important;
-    width: 3% !important;
+  /* Positioning */
+  position: absolute;
+  bottom: 10vh !important;
+  right: 5vw !important;
+  /*Size*/
+  height: 5.5% !important;
+  width: 3% !important;
 
   transition: border 0.3s ease, opacity 0.3s ease;
 }
@@ -27,10 +27,10 @@
   width: 8% !important;
   height: 5% !important;
   font-size: 1.4vw !important;
-    /* Positioning */
-    position: absolute;
-    bottom: 10vh !important;
-    left: 3.6vw !important;
+  /* Positioning */
+  position: absolute;
+  bottom: 10vh !important;
+  left: 3.6vw !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

@@ -8,21 +8,16 @@
   overflow-x: scroll;
 
   /*Box model*/
-  height: 500px;
   max-width: 100%;
-
+  height: 500px;
   margin-top: -108px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 15px;
-
+ 
 
   /*Positioning*/
   position: relative;
   z-index: 1;
 
   /*Backgrounds and Borders*/
-
   border: dotted 3px red;
   /*Comment out when done*/
 }
@@ -34,22 +29,16 @@
 .card-container {
   /*Display and layout*/
   display: flex;
-  overflow: visible;
+  overflow-y: visible;
 
   /*Box model*/
-  width: auto;
+  width: 100vm;
   height: 360px;
   justify-content: space-around;
   align-items: center;
 
-  /*Positioning*/
-  z-index: 1;
-
   /*Backgrounds and Borders*/
-
-  border: dotted 3px red;
-  /*Comment out when done*/
-
+  border: dotted 3px red; /*Comment out when done*/
 }
 
 
@@ -66,16 +55,14 @@
   width: 285px;
   height: 354px;
   box-sizing: border-box;
-  margin-right: 20px;
+  margin: 12px;
 
   /*Positioning*/
   z-index: 1;
 
   /*Backgrounds and Borders*/
   background-color: darkslategrey;
-  border-radius: 0.2vm;
   border: none;
-
 
   /* Animations & Transitions*/
   transition: transform 0.3s ease-in-out;
@@ -87,7 +74,6 @@
 
   /* Animations & Transitions*/
   transform: scale(1.2);
-
 }
 
 .cardImg {
@@ -104,11 +90,17 @@
   border-radius: 1.2px;
 }
 
+.cardImg:hover {
+  /*Positioning*/
+  z-index: 2;
+}
+
 #first:hover {
-  margin-left: 1px;
+  margin-left: 30px;
   flex-grow: 0;
   flex-shrink: 0;
   box-sizing: border-box;
+  transition: margin-left 0.2 ease-out;
 }
 
 #last:hover {
@@ -116,6 +108,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   box-sizing: border-box;
+  transition: margin-left 0.2 ease-out;
 }
 
 
@@ -124,44 +117,46 @@
   display: flex;
 
   /*Box model*/
-  height: 40px;
+  height: 355px;
   width: 40px;
 
   /*Positioning*/
   position: absolute;
-  z-index: 10;
+  z-index: 3;
 
   /*Backgrounds & Borders*/
   border: none;
   border: dashed red solid;
-  background-color: yellow; /*Change back to transparent when done*/
-  background-image:  url("https://i.postimg.cc/mgcSPvRY/left-arrow.png");
+  background-color: transparent; /*Change back to transparent when done*/
+  background-image: url("https://i.postimg.cc/mgcSPvRY/left-arrow.png");
   background-size: 21px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .next-btn {
-/*Display and layout*/
-display: flex;
+  /*Display and layout*/
+  display: flex;
 
-/*Box model*/
-height: 40px;
-width: 40px;
+  /*Box model*/
+  height: 355px;
+  width: 40px;
 
-/*Positioning*/
-position: fixed;
-right: 0;
-z-index: 10;
+  /*Positioning*/
+  position: absolute;
+  top: 336px;
+  right: 1px;
+  z-index: 3;
 
-/*Backgrounds & Borders*/
-border: none;
-border: dashed red solid;
-background-color: yellow; /*Change back to transparent when done*/
-background-image:  url("https://i.postimg.cc/nrjL4GLP/right-arrow.png");
-background-size: 21px;
-background-repeat: no-repeat;
-background-position: center;
+  /*Backgrounds & Borders*/
+  border: none;
+  border: dashed red solid;
+  background-color: transparent;
+  /*Change back to transparent when done*/
+  background-image: url("https://i.postimg.cc/nrjL4GLP/right-arrow.png");
+  background-size: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .prev-btn:hover,
@@ -169,4 +164,14 @@ background-position: center;
   background-color: darkgrey;
   /* Change background color on hover */
   border: 1px groove;
+}
+
+.prev-btn:hover {
+  background-color: rgb(40, 40, 40, 0.3);
+  z-index: 4;
+}
+
+.next-btn:hover {
+  background-color: rgb(40, 40, 40, 0.3);
+  z-index: 4;
 }
