@@ -325,6 +325,7 @@
 
   .card-container {
     height: 360px;
+    margin-left: -15px;
   }
 
   .prev-btn,
@@ -334,11 +335,11 @@
 
   .title {
     /*Typography*/
-    font-size:20px;
+    font-size: 19px;
 
     /*Positioning*/
-    top: -194px;
-    left: 66px;
+    top: -196px;
+    left: 51px;
 
     z-index: 2; /*Might be a pointless poperty*/
   }
