@@ -14,6 +14,10 @@ function App() {
         <NavBar />
         <HeroImage />
         <SliderComponent />
+        <SliderComponent />
+        <SliderComponent />
+        <SliderComponent />
+        <SliderComponent />
       </Suspense>
     </>
   );

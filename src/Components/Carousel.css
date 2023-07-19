@@ -11,7 +11,6 @@
   max-width: 100%;
   height: 500px;
   margin-top: -108px;
- 
 
   /*Positioning*/
   z-index: 1;
@@ -39,7 +38,6 @@
   /*border: dotted 3px red; Comment out when done*/
 }
 
-
 .card-container::-webkit-scrollbar {
   display: none;
 }
@@ -50,6 +48,8 @@
   flex-grow: 0;
 
   /*Box model*/
+  max-width: 100%;
+  max-height: 100%;
   width: 285px;
   height: 354px;
   box-sizing: border-box;
@@ -79,7 +79,7 @@
 
   /*Box model*/
   max-width: 100%;
-  height: 100%;
+  max-height: 100%;
 
   /*Positioning*/
   object-fit: cover;
@@ -111,7 +111,6 @@
   z-index: 3;
 }
 
-
 .prev-btn {
   /*Display and layout*/
   display: flex;
@@ -127,7 +126,8 @@
   /*Backgrounds & Borders*/
   border: none;
   /*border: dashed red solid;*/
-  background-color: transparent; /*Change back to transparent when done*/
+  background-color: transparent;
+  /*Change back to transparent when done*/
   background-image: url("https://i.postimg.cc/mgcSPvRY/left-arrow.png");
   background-size: 21px;
   background-repeat: no-repeat;
@@ -166,4 +166,101 @@
 .next-btn:hover {
   background-color: rgb(40, 40, 40, 0.3);
   z-index: 4;
+}
+
+/* Breakpoints */
+@media (max-width: 480px) {
+  /* Mobile Portrait */
+  .card {
+    width: 240px;
+    height: 298px;
+  }
+
+  .card-container {
+    height: 240px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    height: 240px;
+  }
+}
+
+/*standard hiearchy*/
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Mobile Landscape */
+  .wrapper {
+    height: 400px;
+  }
+
+  .card-container {
+    height: 248px;
+  }
+
+  .card {
+    width: 200px;
+    height: 248px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    height: 240px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet Portrait */
+  .wrapper {
+    height: 450px;
+  }
+  .card-container {
+    height: 298px;
+  }
+  .card {
+    width: 240px;
+    height: 298px;
+  }
+  .prev-btn,
+  .next-btn {
+    height: 260px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Tablet Landscape */
+
+  .wrapper {
+    height: 460px;
+  }
+
+  .card-container {
+    height: 310px;
+  }
+
+  .card {
+    width: 250px;
+    height: 310px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Desktop and larger */
+  .card {
+    width: 285px;
+    height: 354px;
+  }
+
+  .card-container {
+    height: 360px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    height: 360px;
+  }
 }

@@ -5,6 +5,7 @@ import './Nav-Bar.css';
 const NavBar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
@@ -13,6 +14,7 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollPos(window.pageYOffset);
+      setIsScrolled(window.pageYOffset > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,7 +24,7 @@ const NavBar = () => {
     };
   }, []);
 
-  const navbarBackgroundColor = `rgba(0, 0, 0, ${scrollPos > 100 ? 1 : 0.2})`;
+  const navbarBackgroundColor = isScrolled ? 'black' : 'transparent';
 
   return (
     <>
@@ -31,6 +33,7 @@ const NavBar = () => {
         variant="dark"
         fixed="top"
         style={{ transition: 'background-color 0.3s ease-in-out' }}
+        className={isScrolled ? 'navbar-scrolled' : ''}
       >
         <Button
           variant="outline-light"
@@ -111,14 +114,12 @@ const NavBar = () => {
           .nav-menu-button {
             border: none !important;
             background-color: transparent !important;
-            
           }
 
-        
-
           .navbar-toggler-icon {
-            width: 34px;
-            height: 34px;
+            width: 40px;
+            height: 40px;
+            background-size: 100% 100% !important;
           }
 
           .offcanvas.show {
@@ -133,7 +134,7 @@ const NavBar = () => {
 
           .red-button:hover {
             background-color: #fb5235 !important;
-            }
+          }
 
           .search-input {
             width: 100%;
@@ -142,6 +143,11 @@ const NavBar = () => {
 
           .me-2.form-control {
             margin-left: 5px;
+          }
+
+          /* Scroll Behavior */
+          .navbar-scrolled {
+            background-color: black !important;
           }
         `}
       </style>

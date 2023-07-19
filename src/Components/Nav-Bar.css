@@ -10,15 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 5px;
 }
 
 .logo {
   height: auto !important;
-  width: 10vw !important;
-
+  width: auto !important;
 }
 
-/*This is the container of the navigation bar elements*/
+/* This is the container of the navigation bar elements */
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -26,7 +26,7 @@
   height: 5vw;
 }
 
-/*This is the netflix logo container*/
+/* This is the netflix logo container */
 .ms-3 {
   display: flex;
   justify-content: center;
@@ -34,6 +34,35 @@
 }
 
 .btn {
-  --bs-btn-padding-x: 0  !important;
+  --bs-btn-padding-x: 0 !important;
   --bs-btn-padding-y: 0 !important;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  /* Desktop and smaller */
+  .navbar {
+    height: 80px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Tablet Landscape and smaller */
+  .navbar {
+    height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Tablet Portrait and smaller */
+  .navbar {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile Landscape and smaller */
+  .navbar {
+    height: 50px;
+  }
 }
