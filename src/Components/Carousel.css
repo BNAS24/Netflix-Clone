@@ -1,5 +1,11 @@
 /* Carousel.css */
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('/src/Fonts/Gotham-Font/GothamBook.ttf') format('ttf'),
+    url('/src/Fonts/Gotham-Font/GothamBold.ttf') format('ttf');
+}
+
 .wrapper {
   /*Display and layout*/
   display: flex;
@@ -21,6 +27,23 @@
 
 .wrapper::-webkit-scrollbar {
   display: none;
+}
+
+.title {
+  /*Display and layout*/
+
+  /*Typography*/
+  font-size: 20px;
+ 
+
+  /*Positioning*/
+  position: relative;
+  top: -195px;
+  left: 45px;
+  z-index: 3;
+
+  /*Colors*/
+  color: white;
 }
 
 .card-container {
@@ -59,7 +82,7 @@
   z-index: 1;
 
   /*Backgrounds and Borders*/
-  background-color: darkslategrey;
+  background-color: #1e1e1e;
   border: none;
 
   /* Animations & Transitions*/
@@ -170,6 +193,7 @@
 
 /* Breakpoints */
 @media (max-width: 480px) {
+
   /* Mobile Portrait */
   .card {
     width: 240px;
@@ -182,12 +206,15 @@
 
   .prev-btn,
   .next-btn {
-    height: 240px;
+    height: 298px;
   }
+
+  .title {}
 }
 
 /*standard hiearchy*/
 @media (min-width: 481px) and (max-width: 767px) {
+
   /* Mobile Landscape */
   .wrapper {
     height: 400px;
@@ -195,6 +222,7 @@
 
   .card-container {
     height: 248px;
+    margin-left: -18px;
   }
 
   .card {
@@ -204,25 +232,52 @@
 
   .prev-btn,
   .next-btn {
-    height: 240px;
+    height: 248px;
+  }
+
+  .title {
+    /*Typography*/
+    font-size: 12px;
+
+    /*Positioning*/
+    top: -140px;
+    left: 27px;
+
+    z-index: 2; /*Might be a pointless poperty*/
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* Tablet Portrait */
   .wrapper {
     height: 450px;
   }
+
   .card-container {
     height: 298px;
+    margin-left: -22px;
   }
+
   .card {
     width: 240px;
     height: 298px;
   }
+
   .prev-btn,
   .next-btn {
-    height: 260px;
+    height: 298px;
+  }
+
+  .title {
+    /*Typography*/
+    font-size: 14px;
+
+    /*Positioning*/
+    top: -163px;
+    left: 28px;
+
+    z-index: 2; /*Might be a pointless poperty*/
   }
 }
 
@@ -235,6 +290,7 @@
 
   .card-container {
     height: 310px;
+    margin-left: -22px;
   }
 
   .card {
@@ -244,11 +300,23 @@
 
   .prev-btn,
   .next-btn {
-    height: 300px;
+    height: 310px;
+  }
+
+  .title {
+    /*Typography*/
+    font-size: 17px;
+
+    /*Positioning*/
+    top: -173px;
+    left: 37px;
+
+    z-index: 2; /*Might be a pointless poperty*/
   }
 }
 
 @media (min-width: 1200px) {
+
   /* Desktop and larger */
   .card {
     width: 285px;
@@ -261,6 +329,17 @@
 
   .prev-btn,
   .next-btn {
-    height: 360px;
+    height: 354px;
+  }
+
+  .title {
+    /*Typography*/
+    font-size:20px;
+
+    /*Positioning*/
+    top: -194px;
+    left: 66px;
+
+    z-index: 2; /*Might be a pointless poperty*/
   }
 }

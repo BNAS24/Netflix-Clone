@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Carousel.css';
 
-function SliderComponent() {
+function SliderComponent({ images, showFirstImageFunctionality, showLastImageFunctionality }) {
   const wrapperRef = useRef(null);
   const firstItemRef = useRef(null);
   const lastItemRef = useRef(null);
@@ -31,12 +31,22 @@ function SliderComponent() {
       { threshold: 1 }
     );
 
-    observer1.observe(firstItemRef.current);
-    observer2.observe(lastItemRef.current);
+    if (firstItemRef.current) {
+      observer1.observe(firstItemRef.current);
+    }
+
+    if (lastItemRef.current) {
+      observer2.observe(lastItemRef.current);
+    }
 
     return () => {
-      observer1.disconnect();
-      observer2.disconnect();
+      if (firstItemRef.current) {
+        observer1.unobserve(firstItemRef.current);
+      }
+
+      if (lastItemRef.current) {
+        observer2.unobserve(lastItemRef.current);
+      }
     };
   }, []);
 
@@ -71,37 +81,23 @@ function SliderComponent() {
 
   return (
     <div className="wrapper" ref={wrapperRef}>
+    <div className='title'>Home</div>
       <div className="card-container">
-        <div className="card" id="first" ref={firstItemRef}>
-          <img className="cardImg" src="https://i.postimg.cc/FzFhQ4j5/Black-Widow.jpg" alt="Black Widow" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/j2k6HRcR/Extraction-2.png" alt="Extraction 2" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/rsdRLxGL/Spider-Man-Into-The-Spider-Verse.png" alt="Spider Man Into The Spider Verse" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/QtFcj2sP/John-Wick-3.jpg" alt="John Wick" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/qqnn32Nx/Hobbs-Shaw.png" alt="Hobbs and Shaw" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/W43k7BD3/Nobody.png" alt="Nobody" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/W43k7BD3/Nobody.png" alt="Nobody" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/W43k7BD3/Nobody.png" alt="Nobody" />
-        </div>
-        <div className="card">
-          <img className="cardImg" src="https://i.postimg.cc/W43k7BD3/Nobody.png" alt="Nobody" />
-        </div>
-        <div className="card" id="last" ref={lastItemRef} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-          <img className="cardImg" src="https://i.postimg.cc/Gmh0JVZ4/The-Old-Guard.png" alt="The Old Guard" />
-        </div>
+        {showFirstImageFunctionality && (
+          <div className="card" id="first" ref={firstItemRef}>
+            <img className="cardImg" src={images[0].url} alt={images[0].alt} />
+          </div>
+        )}
+        {images.slice(1, -1).map((image, index) => (
+          <div className="card" key={index}>
+            <img className="cardImg" src={image.url} alt={image.alt} />
+          </div>
+        ))}
+        {showLastImageFunctionality && (
+          <div className="card" id="last" ref={lastItemRef} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <img className="cardImg" src={images[images.length - 1].url} alt={images[images.length - 1].alt} />
+          </div>
+        )}
       </div>
       {showPrevButton && <button className="prev-btn" onClick={handlePrevClick}></button>}
       {showNextButton && <button className="next-btn" onClick={handleNextClick}></button>}
