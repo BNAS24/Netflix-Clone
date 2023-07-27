@@ -6,7 +6,6 @@ import Search from './Setting-Search';
 
 const NavBar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggleOffcanvas = () => {
@@ -15,7 +14,6 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(window.scrollY); // Use scrollY instead of pageYOffset
       setIsScrolled(window.scrollY > 100); // Use scrollY instead of pageYOffset
     };
 
@@ -92,7 +90,6 @@ const NavBar = () => {
           </Nav>
         </Navbar.Offcanvas>
       </Navbar>
-
     </>
   );
 };
