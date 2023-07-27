@@ -1,0 +1,48 @@
+#search {
+        /*Display and alignment*/
+
+    /*Size*/
+    height: 38px;
+    width: 50px;
+
+    /*Position*/
+    position: absolute;
+    right: 64px;
+    z-index: 3;
+
+    /*Background and border*/
+    background-image: url('https://i.postimg.cc/D0rvNdX8/Search-Button.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+
+    border: none;
+}
+
+#setting {
+    /*Display and alignment*/
+
+    /*Size*/
+    height: 38px;
+    width: 50px;
+
+    /*Position*/
+    position: absolute;
+    right: 8px;
+    z-index: 3;
+
+    /*Background and border*/
+    background-image: url('https://i.postimg.cc/nrZB4FGy/3-Dot-Settings-White.png');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+
+    border: none;
+
+}
+
+.hovered:hover {
+    cursor: pointer;
+}

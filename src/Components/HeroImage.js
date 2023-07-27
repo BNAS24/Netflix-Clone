@@ -168,6 +168,7 @@ const HeroImage = () => {
         <span className="list-text">+ My List</span>
       </button>
     </div>
+    
   );
 };
 

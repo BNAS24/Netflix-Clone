@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap';
 import './Nav-Bar.css';
+import { Setting } from './Setting-Search';
+import Search from './Setting-Search';
 
 const NavBar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -13,8 +15,8 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(window.pageYOffset);
-      setIsScrolled(window.pageYOffset > 100);
+      setScrollPos(window.scrollY); // Use scrollY instead of pageYOffset
+      setIsScrolled(window.scrollY > 100); // Use scrollY instead of pageYOffset
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -51,6 +53,8 @@ const NavBar = () => {
             className="d-inline-block align-top logo"
           />
         </Navbar.Brand>
+        <Search />
+        <Setting />
       </Navbar>
       <Navbar
         bg="dark"
@@ -89,68 +93,6 @@ const NavBar = () => {
         </Navbar.Offcanvas>
       </Navbar>
 
-      <style>
-        {`
-          .logo {
-            height: 30px;
-          }
-
-          .nav-link {
-            padding-left: 7px;
-          }
-
-          .nav-link.white-text {
-            color: white !important;
-          }
-
-          .nav-link:hover {
-            background-color: transparent !important;
-          }
-
-          .offcanvas-header {
-            border-color: rgba(255, 255, 255, 0.2) !important;
-          }
-
-          .nav-menu-button {
-            border: none !important;
-            background-color: transparent !important;
-          }
-
-          .navbar-toggler-icon {
-            width: 40px;
-            height: 40px;
-            background-size: 100% 100% !important;
-          }
-
-          .offcanvas.show {
-            background-color: rgb(30, 30, 30); /* Dark grey color */
-          }
-
-          .red-button {
-            background-color: red !important;
-            border: none;
-            margin-right: 5px;
-          }
-
-          .red-button:hover {
-            background-color: #fb5235 !important;
-          }
-
-          .search-input {
-            width: 100%;
-            padding-right: 20px;
-          }
-
-          .me-2.form-control {
-            margin-left: 5px;
-          }
-
-          /* Scroll Behavior */
-          .navbar-scrolled {
-            background-color: black !important;
-          }
-        `}
-      </style>
     </>
   );
 };

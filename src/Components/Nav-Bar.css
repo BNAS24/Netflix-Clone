@@ -1,41 +1,61 @@
-#button {
-  background-color: red !important;
+/* Styles from the <style> tag in Nav-Bar.js */
+.logo {
+  height: 30px;
 }
 
-.navbar-toggler-icon {
-  background-size: 100% 100% !important;
+.nav-link {
+  padding-left: 7px;
+}
+
+.nav-link.white-text {
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: transparent !important;
+}
+
+.offcanvas-header {
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .nav-menu-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 5px;
+  border: none !important;
+  background-color: transparent !important;
 }
 
-.logo {
-  height: auto !important;
-  width: auto !important;
+.navbar-toggler-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100% !important;
 }
 
-/* This is the container of the navigation bar elements */
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch !important;
-  height: 5vw;
+.offcanvas.show {
+  background-color: rgb(30, 30, 30); /* Dark grey color */
 }
 
-/* This is the netflix logo container */
-.ms-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.red-button {
+  background-color: red !important;
+  border: none;
+  margin-right: 5px;
 }
 
-.btn {
-  --bs-btn-padding-x: 0 !important;
-  --bs-btn-padding-y: 0 !important;
+.red-button:hover {
+  background-color: #fb5235 !important;
+}
+
+.search-input {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.me-2.form-control {
+  margin-left: 5px;
+}
+
+/* Scroll Behavior */
+.navbar-scrolled {
+  background-color: black !important;
 }
 
 /* Media Queries */
@@ -44,12 +64,20 @@
   .navbar {
     height: 80px;
   }
+
+  .offcanvas.show {
+    width: 30vmax;
+  }
 }
 
 @media (max-width: 991px) {
   /* Tablet Landscape and smaller */
   .navbar {
     height: 70px;
+  }
+
+  .offcanvas.show {
+    width: 35vmax;
   }
 }
 
@@ -58,11 +86,19 @@
   .navbar {
     height: 60px;
   }
+
+  .offcanvas.show {
+    width: 30vmax;
+  }
 }
 
 @media (max-width: 480px) {
   /* Mobile Landscape and smaller */
   .navbar {
     height: 50px;
+  }
+
+  .offcanvas.show {
+    width: 20vmax;
   }
 }
