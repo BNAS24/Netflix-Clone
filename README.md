@@ -1,4 +1,4 @@
-This project is a Netflix imitation with some of my own personal functionality decisions.
+#This project is a Netflix imitation with some of my own personal functionality decisions.
 
 # Getting Started with Create React App
 
