@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/reactstrap/static/css/main.dada4de4.css",
+    "main.js": "/reactstrap/static/js/main.4945ab83.js",
+    "static/css/149.7b0c48a6.chunk.css": "/reactstrap/static/css/149.7b0c48a6.chunk.css",
+    "static/js/149.a1b1d040.chunk.js": "/reactstrap/static/js/149.a1b1d040.chunk.js",
+    "static/css/276.fe7e384d.chunk.css": "/reactstrap/static/css/276.fe7e384d.chunk.css",
+    "static/js/276.d1128aa7.chunk.js": "/reactstrap/static/js/276.d1128aa7.chunk.js",
+    "static/css/362.c3836f20.chunk.css": "/reactstrap/static/css/362.c3836f20.chunk.css",
+    "static/js/362.bc93c140.chunk.js": "/reactstrap/static/js/362.bc93c140.chunk.js",
+    "static/js/787.4eabcf90.chunk.js": "/reactstrap/static/js/787.4eabcf90.chunk.js",
+    "static/js/827.616fb024.chunk.js": "/reactstrap/static/js/827.616fb024.chunk.js",
+    "static/media/GothamBook.ttf": "/reactstrap/static/media/GothamBook.58fb9151c57e59668f17.ttf",
+    "static/media/GothamBold.ttf": "/reactstrap/static/media/GothamBold.108854bb27dee2dce854.ttf",
+    "static/media/Gotham-Bold.otf": "/reactstrap/static/media/Gotham-Bold.f9a5c9247af2c80333f4.otf",
+    "index.html": "/reactstrap/index.html",
+    "main.dada4de4.css.map": "/reactstrap/static/css/main.dada4de4.css.map",
+    "main.4945ab83.js.map": "/reactstrap/static/js/main.4945ab83.js.map",
+    "149.7b0c48a6.chunk.css.map": "/reactstrap/static/css/149.7b0c48a6.chunk.css.map",
+    "149.a1b1d040.chunk.js.map": "/reactstrap/static/js/149.a1b1d040.chunk.js.map",
+    "276.fe7e384d.chunk.css.map": "/reactstrap/static/css/276.fe7e384d.chunk.css.map",
+    "276.d1128aa7.chunk.js.map": "/reactstrap/static/js/276.d1128aa7.chunk.js.map",
+    "362.c3836f20.chunk.css.map": "/reactstrap/static/css/362.c3836f20.chunk.css.map",
+    "362.bc93c140.chunk.js.map": "/reactstrap/static/js/362.bc93c140.chunk.js.map",
+    "787.4eabcf90.chunk.js.map": "/reactstrap/static/js/787.4eabcf90.chunk.js.map",
+    "827.616fb024.chunk.js.map": "/reactstrap/static/js/827.616fb024.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dada4de4.css",
+    "static/js/main.4945ab83.js"
+  ]
+}
