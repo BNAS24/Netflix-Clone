@@ -44,7 +44,7 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon" />
         </Button>
-        <Navbar.Brand href="#" className="ms-3 logo-container">
+        <Navbar.Brand href="#" className="ms-3 logo-container logo-link">
           <img
             src="https://i.postimg.cc/LsLxvqKV/Netflix-Logo-Main.png"
             alt="Netflix Logo"
