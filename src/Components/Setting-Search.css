@@ -1,5 +1,5 @@
 #search {
-        /*Display and alignment*/
+    /*Display and alignment*/
 
     /*Size*/
     height: 38px;
@@ -18,6 +18,8 @@
     background-position: center;
 
     border: none;
+
+    z-index: 4;
 }
 
 #setting {
@@ -38,11 +40,70 @@
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: center;
-
     border: none;
-
+    z-index: 2;
 }
 
 .hovered:hover {
     cursor: pointer;
+}
+
+.active {
+    background-color: rgb(128, 128, 128);
+}
+
+#setting-div {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-left: solid red .5px;
+    border-bottom: solid red .5px;
+    border-top: solid red .5px;
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    top: 68px;
+    z-index: 1;
+}
+
+.setting-a {
+    text-decoration: none !important;
+    display: block;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 20px;
+    flex-direction: column;
+    font-size: 0.8rem;
+
+}
+
+.setting-a:hover {
+    background-color: #1e1e1e;
+}
+
+
+/*SeachBar Styles*/
+
+#searchbar {
+    border: solid 1px red;
+    background-color: black;
+    color: white;
+    padding-left: 8px;
+    z-index: 5;
+}
+
+input[type="search"]:focus {
+    outline: none;
+  }
+  
+.backdrop {
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 3;
 }

@@ -65,9 +65,7 @@
 /* Media Queries */
 @media (max-width: 1200px) {
   /* Desktop and smaller */
-  .navbar {
-    height: 80px;
-  }
+
 
   .offcanvas.show {
     width: 30vmax;
@@ -80,9 +78,7 @@
 
 @media (max-width: 991px) {
   /* Tablet Landscape and smaller */
-  .navbar {
-    height: 70px;
-  }
+
 
   .offcanvas.show {
     width: 35vmax;
@@ -95,9 +91,7 @@
 
 @media (max-width: 767px) {
   /* Tablet Portrait and smaller */
-  .navbar {
-    height: 60px;
-  }
+
 
   .offcanvas.show {
     width: 30vmax;
@@ -110,9 +104,7 @@
 
 @media (max-width: 480px) {
   /* Mobile Landscape and smaller */
-  .navbar {
-    height: 50px;
-  }
+
 
   .offcanvas.show {
     width: 20vmax;
