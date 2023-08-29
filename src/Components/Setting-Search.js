@@ -22,7 +22,8 @@ const searchBox = () => {
     <>.
   <button 
   type='button' 
-  id='search' 
+  id='search'
+  aria-label='button' 
   className='search-button hovered'
   onClick={searchBox}
   >
@@ -53,13 +54,14 @@ const Setting = () => {
       <button
         type="button"
         id="setting"
+        aria-label='button'
         className={`setting-button ${showBox ? 'active' : ''}`}
         onClick={settingButton}
       ></button>
       {showBox && (
         <div id="setting-div">
-          <a className="setting-a" href='http://localhost:3000/#'>Settings</a>
-          <a className="setting-a" href='http://localhost:3000/#'>Sign Out</a>
+          <a className="setting-a"  href='http://localhost:3000/#'>Settings</a>
+          <a className="setting-a"  href='http://localhost:3000/#'>Sign Out</a>
         </div>
       )}
     </>

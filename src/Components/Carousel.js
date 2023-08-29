@@ -102,8 +102,8 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
           </div>
         )}
       </div>
-      {showPrevButton && <button className="prev-btn" onClick={handlePrevClick}></button>}
-      {showNextButton && <button className="next-btn" onClick={handleNextClick}></button>}
+      {showPrevButton && <button type='button' aria-label='button' className="prev-btn" onClick={handlePrevClick}></button>}
+      {showNextButton && <button type='button' aria-label='button' className="next-btn" onClick={handleNextClick}></button>}
     </div>
   );
 }
