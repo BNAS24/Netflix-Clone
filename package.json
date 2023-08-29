@@ -1,7 +1,6 @@
 {
   "name": "reactstrap",
   "version": "0.1.0",
-  "homepage": "https://BNAS24.github.io/reactstrap",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.0",

@@ -23,7 +23,7 @@ a.ms-3.logo-container.navbar-brand {
 }
 
 .nav-link {
-  padding-left: 7px;
+  padding-left: 16px;
 }
 
 .nav-link.white-text {
@@ -36,6 +36,10 @@ a.ms-3.logo-container.navbar-brand {
 
 .offcanvas-header {
   border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.offcanvas.offcanvas-start { 
+  border-right: none;
 }
 
 .nav-menu-button {

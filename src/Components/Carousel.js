@@ -31,21 +31,24 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
       { threshold: 1 }
     );
 
-    if (firstItemRef.current) {
-      observer1.observe(firstItemRef.current);
+    const firstItem = firstItemRef.current; // Copy the ref value to a variable
+    const lastItem = lastItemRef.current;   // Copy the ref value to a variable
+
+    if (firstItem) {
+      observer1.observe(firstItem);
     }
 
-    if (lastItemRef.current) {
-      observer2.observe(lastItemRef.current);
+    if (lastItem) {
+      observer2.observe(lastItem);
     }
 
     return () => {
-      if (firstItemRef.current) {
-        observer1.unobserve(firstItemRef.current);
+      if (firstItem) {
+        observer1.unobserve(firstItem);
       }
 
-      if (lastItemRef.current) {
-        observer2.unobserve(lastItemRef.current);
+      if (lastItem) {
+        observer2.unobserve(lastItem);
       }
     };
   }, []);
@@ -81,7 +84,7 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
 
   return (
     <div className="wrapper" ref={wrapperRef}>
-    <div className='title'>Home</div>
+      <div className='title'>Home</div>
       <div className="card-container">
         {showFirstImageFunctionality && (
           <div className="card" id="first" ref={firstItemRef}>

@@ -19,7 +19,7 @@ const searchBox = () => {
 
 
   return (
-    <>
+    <>.
   <button 
   type='button' 
   id='search' 
@@ -58,7 +58,7 @@ const Setting = () => {
       ></button>
       {showBox && (
         <div id="setting-div">
-          <a className="setting-a" href='http://localhost:3000/#'>Setting</a>
+          <a className="setting-a" href='http://localhost:3000/#'>Settings</a>
           <a className="setting-a" href='http://localhost:3000/#'>Sign Out</a>
         </div>
       )}
