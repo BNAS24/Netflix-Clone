@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Carousel.css';
 
-function SliderComponent({ images, showFirstImageFunctionality, showLastImageFunctionality }) {
+function SliderComponent(props) {
+  const { images, showFirstImageFunctionality, showLastImageFunctionality, row } = props;
   const wrapperRef = useRef(null);
   const firstItemRef = useRef(null);
   const lastItemRef = useRef(null);
@@ -31,8 +32,8 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
       { threshold: 1 }
     );
 
-    const firstItem = firstItemRef.current; // Copy the ref value to a variable
-    const lastItem = lastItemRef.current;   // Copy the ref value to a variable
+    const firstItem = firstItemRef.current;
+    const lastItem = lastItemRef.current;
 
     if (firstItem) {
       observer1.observe(firstItem);
@@ -71,7 +72,7 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
     wrapperRef.current.style.paddingRight = '20px';
     const wrapperRect = wrapperRef.current.getBoundingClientRect();
     const lastItemRect = lastItemRef.current.getBoundingClientRect();
-    const scrollAmount = lastItemRect.right - wrapperRect.right + 40;
+    const scrollAmount = lastItemRect.right - wrapperRect.right + 48;
     wrapperRef.current.scrollBy({
       left: scrollAmount,
       behavior: 'smooth'
@@ -84,7 +85,9 @@ function SliderComponent({ images, showFirstImageFunctionality, showLastImageFun
 
   return (
     <div className="wrapper" ref={wrapperRef}>
-      <div className='title'>Home</div>
+      <div className='title-wrapper'>
+        <div className='title'><p className='movie-title'>{row.title}</p></div>
+      </div>
       <div className="card-container">
         {showFirstImageFunctionality && (
           <div className="card" id="first" ref={firstItemRef}>
