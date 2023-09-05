@@ -88,7 +88,7 @@
 /*SeachBar Styles*/
 
 #searchbar {
-    border: solid 1px red;
+    border: solid .5px red;
     background-color: black;
     width: 40%;
     color: white;
@@ -107,4 +107,30 @@ input[type="search"]:focus {
     background-color: black;
     opacity: 0.8;
     z-index: 3;
+}
+
+.close-settings-button {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 40px;
+    margin-left: -0.5px;
+    margin-top: 0.5px;
+    background-color: #1e1e1e;
+    background-image: url('/public/close.png');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    border: none;
+    border-right: solid .5px red;
+    border-left: solid .5px red;
+    border-bottom: solid .5px red;
+    color: white;
+    padding: 2px 2px;
+}
+
+.close-settings-button:hover {
+    background-color: #2b2b2b;
 }

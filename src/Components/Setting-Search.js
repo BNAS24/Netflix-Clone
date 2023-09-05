@@ -51,6 +51,9 @@ const Setting = () => {
     setShowBox(prevShowBox => !prevShowBox);
   };
 
+  const toggleSettings = () => { 
+    settingButton(false);
+  }
   return (
     <>
       <button
@@ -64,6 +67,7 @@ const Setting = () => {
         <div id="setting-div">
           <a className="setting-a"  href='http://localhost:3000/#'>Settings</a>
           <a className="setting-a"  href='http://localhost:3000/#'>Sign Out</a>
+          <button className='close-settings-button' type='button' onClick={toggleSettings}></button>
         </div>
       )}
     </>
