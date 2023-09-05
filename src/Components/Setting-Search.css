@@ -1,6 +1,4 @@
 #search {
-    /*Display and alignment*/
-
     /*Size*/
     height: 38px;
     width: 50px;
@@ -23,8 +21,6 @@
 }
 
 #setting {
-    /*Display and alignment*/
-
     /*Size*/
     height: 38px;
     width: 50px;
@@ -77,15 +73,11 @@
     padding-left: 20px;
     flex-direction: column;
     font-size: 0.8rem;
-
 }
 
 .setting-a:hover {
     background-color: #1e1e1e;
 }
-
-
-/*SeachBar Styles*/
 
 #searchbar {
     border: solid .5px red;
