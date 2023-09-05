@@ -9,6 +9,9 @@ const searchBox = () => {
     setSearchButton(prevSearchButton => !prevSearchButton);
 };
 
+const toggleBackdrop = () => {
+  searchBox(false);
+}
 
     // Access the styled elements and update their styles
     const styledElements = document.getElementsByName('body');
@@ -32,8 +35,7 @@ const searchBox = () => {
     <>
     <input type="search" id="searchbar" placeholder="Search">
     </input>
-    <div className="backdrop">
-      {/*This is where you'll be adding the feature of the backdrop. Make sure you add a class for it as well and put it in the style sheet so you can get the dimming affect */}
+    <div className="backdrop" onClick={toggleBackdrop}>
     </div>
     </>
   )}
