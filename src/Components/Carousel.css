@@ -49,7 +49,6 @@
   color: white;
 }
 
-
 .card-container {
   /*Display and layout*/
   display: flex;
@@ -211,7 +210,6 @@
   .next-btn {
     height: 298px;
   }
-
 }
 
 /*standard hiearchy*/
